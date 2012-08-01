@@ -17,7 +17,7 @@ function nicholls_home_theme_support_filter( $features ) {
 	$features['custom-header'] = false;
 	return $features;
 }
-add_filter( 'fnbx_theme_support', 'nicholls_home_theme_support_filter' );
+add_filter( 'fnbx_theme_support', 'nicholls_home_theme_support_filter', 20 );
 
 // Use filter to add widget groups
 function nicholls_home_theme_widgets( $widget_groups ) {
