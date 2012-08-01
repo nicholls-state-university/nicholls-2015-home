@@ -1,0 +1,86 @@
+/* START Custom Funroe Styles */
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.text_green {
+	color: #AACC55;
+}
+
+.text_sans_green {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #AACC55;
+}
+
+.text_green_large_bold {
+	font-size: 110%;
+	font-weight: bold;
+	color: #AACC55;
+}
+
+.text_blue {
+	color: #000044;
+}
+
+.text_sans_blue {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #000044;
+}
+
+.text_blue_large_bold {
+	font-size: 110%;
+	font-weight: bold;
+	color: #000044;
+}
+
+.text_orange_dark {
+	color: #996633;
+}
+
+.text_sans_orange_dark {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #996633;
+}
+
+.text_orange_dark_large_bold {
+	font-size: 110%;
+	font-weight: bold;
+	color: #996633;
+}
+
+table.table_row_border_grey {
+ border: none;
+ border-width:thin;
+ border-collapse:collapse;
+ padding:3px;
+ text-align:center;
+ vertical-align:top;
+ margin-bottom:0px;
+ margin-top:0px;
+ margin-right:0px;
+ margin-left:0px;
+ direction:ltr;
+ width:auto;
+ height:auto;
+ display:table;
+ float:none
+}
+
+table.table_row_border_grey tr {
+ vertical-align:top;
+ height:auto
+ border-bottom: 1px solid #ccc;
+}
+
+table.table_row_border_grey td { 
+ text-align:left;
+ vertical-align:top;
+ border-bottom: 1px solid #ccc;
+}
+
+/* END Custom Funroe Styles */

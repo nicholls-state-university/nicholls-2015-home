@@ -1,0 +1,27 @@
+/*
+THEME NAME: Nicholls 2012 Home Theme
+THEME URI: http://www.nicholls.edu/webmanager/
+DESCRIPTION: Special theme for Nicholls State University Home Page
+VERSION: 1.0
+AUTHOR: Jess Planck
+AUTHOR URI: http://www.nicholls.edu/webmanager/
+TEMPLATE: fnbx
+TAGS: buddypress
+*/
+
+/*
+NOTE - Core CSS rules are in themes/nicholls-core
+*/
+
+.header-nicholls-wrapper- {
+	background: #2d2d2d;
+}
+
+.header-nicholls- {
+	background-image: none;
+	height: 40em;
+}
+
+.notice {
+	background-color: yellow;
+}
