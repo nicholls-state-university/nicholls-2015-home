@@ -12,6 +12,9 @@
 global $j_flex_active;
 $j_flex_active = true;
 
+// Filter to clear out sidebar widgets to make full page
+add_action( 'fnbx_child_init', 'fnbx_template_core_full_page');
+
 /** 
 * Nicholls Theme Home init action
 *
