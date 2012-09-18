@@ -93,6 +93,9 @@ function fnbx_defaut_init_actions() {
 		add_action( 'nicholls_header_start', 'nicholls_emergency_notice_get' );
 		// Image Slider - via plugin
 		add_action( 'nicholls_header_start', 'j_flex_slider' );
+		
+		// Filter to clear out sidebar widgets to make full page
+		add_action( 'fnbx_child_init', 'nicholls_template_core_full_page');
 	}
 		
 	// For all archives we put a page title, for author and categories we put desicription meta if available
@@ -177,7 +180,11 @@ function fnbx_defaut_init_actions() {
 	
 	// Nicholls MegaMenu
 	// add_action( 'fnbx_footer', 'nicholls_megamenu_load' );
-
+	
+	// Nicholls Footer - custom footer.php - Layout
+	add_action( 'nicholls_footer_start', 'nicholls_layout_wrapper_element_open' );	
+	add_action( 'nicholls_footer_end', 'nicholls_layout_wrapper_element_close' );
+	
 	// The default actions get... an action. 
 	do_action( 'fnbx_defaut_actions' );
 }
