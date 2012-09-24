@@ -15,6 +15,7 @@ NOTE - Core CSS rules are in themes/nicholls-core
 
 .header-nicholls-wrapper- {
 	background: #2d2d2d;
+	background-image: url( 'library/images/backgrounds/bg-pattern-n-rectangles-grey-dark.png' );	
 }
 
 .header-nicholls- {
