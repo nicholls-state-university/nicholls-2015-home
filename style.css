@@ -39,7 +39,6 @@ NOTE - Core CSS rules are in themes/nicholls-core
 
 .flex-caption a, .flex-caption a:link, .flex-caption a:visited, .flex-caption a:active {
 	color: #fff;
-	text-decoration: none;
 }
 
 .flex-caption-title {
@@ -50,6 +49,9 @@ NOTE - Core CSS rules are in themes/nicholls-core
     background: transparent url( 'library/images/backgrounds/bg-transparent-black-60.png' );      	
 }
 
+.flex-caption-title a {
+	text-decoration: none;
+}
 
 .flex-caption-content {
     margin: .2em .4em;
