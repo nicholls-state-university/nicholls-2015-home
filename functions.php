@@ -33,12 +33,21 @@ function nicholls_theme_widgets_home_special() {
 	fnbx_generate_widgets( 'home-special' );
 }
 
-function nicholls_home_j_flex_slider_config( $flex_image_config ) {
+function nicholls_home_j_flex_slider_img_config( $flex_image_config ) {
 	$flex_image_config['height'] = 520;
 	$flex_image_config['width'] = 1144;
+	$flex_image_config['crop'] = true;
 	return $flex_image_config;
 }
-add_filter( 'j_flex_image_config', 'nicholls_home_j_flex_slider_config' );
+add_filter( 'j_flex_image_config', 'nicholls_home_j_flex_slider_img_config' );
+
+function nicholls_home_j_flex_slider_img_thumb_config( $flex_image_config ) {
+	$flex_image_config['height'] = 180;
+	$flex_image_config['width'] = 180;
+	$flex_image_config['crop'] = true;
+	return $flex_image_config;
+}
+add_filter( 'j_flex_image_thumb_config', 'nicholls_home_j_flex_slider_img_thumb_config' );
 
 /**
  * Taken directly from wp_rss_display Display the RSS entries in a list.

@@ -45,7 +45,8 @@ NOTE - Core CSS rules are in themes/nicholls-core
 .flex-caption-title {
 	text-shadow: 1px 1px 1px black;
     margin: .2em 0;
-    padding: .4em;	
+    padding: .4em;
+    color: #fff;
     background: transparent url( 'library/images/backgrounds/bg-transparent-black-60.png' );      	
 }
 
