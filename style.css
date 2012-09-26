@@ -20,9 +20,39 @@ NOTE - Core CSS rules are in themes/nicholls-core
 
 .header-nicholls- {
 	background-image: none;
-	height: 40em;
+	height: auto;
 }
 
 .notice {
 	background-color: yellow;
 }
+
+.flex-active-slide img {
+	float: left;
+}
+
+.flex-caption {
+	float: left;
+	color: #fff;
+    margin-top: -6.8em;
+}
+
+.flex-caption a, .flex-caption a:link, .flex-caption a:visited, .flex-caption a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+.flex-caption-title {
+	text-shadow: 1px 1px 1px black;
+    margin: .2em 0;
+    padding: .4em;	
+    background: transparent url( 'library/images/backgrounds/bg-transparent-black-60.png' );      	
+}
+
+
+.flex-caption-content {
+    margin: .2em .4em;
+    padding: .4em;
+    background: transparent url( 'library/images/backgrounds/bg-transparent-black-60.png' );      
+}
+
