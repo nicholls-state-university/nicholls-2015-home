@@ -40,7 +40,7 @@ html[xmlns] .slides {display: block;}
 /* FlexSlider Default Theme
 *********************************/
 .flexslider {
-	margin: 0 2em;
+	margin: 0;
 	background: #000;
 	border: 1px solid #000; 
 	position: relative;

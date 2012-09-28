@@ -34,7 +34,7 @@ function nicholls_theme_widgets_home_special() {
 }
 
 function nicholls_home_j_flex_slider_img_config( $flex_image_config ) {
-	$flex_image_config['height'] = 520;
+	$flex_image_config['height'] = 600;
 	$flex_image_config['width'] = 1144;
 	$flex_image_config['crop'] = true;
 	return $flex_image_config;
