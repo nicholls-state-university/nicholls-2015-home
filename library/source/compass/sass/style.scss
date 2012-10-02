@@ -1,0 +1,187 @@
+/*
+THEME NAME: Nicholls 2012 Core Theme
+THEME URI: http://www.nicholls.edu
+DESCRIPTION: Nicholls Core Theme to start development 
+VERSION: 1.0
+AUTHOR: Jess Planck
+AUTHOR URI: http://www.nicholls.edu
+TEMPLATE: fnbx
+*/
+
+/* 
+Copyright (c) Jess Planck (http://funroe.net)
+
+The FNBX Theme is released under the GNU General Public License.
+
+This is a WordPress Theme (http://wordpress.org). WordPress is free
+software: you can redistribute it and/or modify it under the terms of
+the GNU General Public License as published by the Free Software
+Foundation, either version 2 of the License, or (at your option) any
+later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with WordPress.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/* Imports --------------------------------------------------------------*/
+
+@import 'nicholls-sprites';
+@import "base";
+/* @import 'defaults'; */
+
+/* Layouts */
+
+/* 
+Column Notes
+.5 width = 1.313
+.25 width = .6565
+*/
+
+$total-columns: 26; 
+$column-width: 1.423em;
+$gutter-width: .88em;
+$grid-padding: 0;
+$show-grid-backgrounds: $show_grids;
+
+/*
+Make Static or Magic
+*/
+$container-style: static;
+
+/* Layout - Default breakpoint is 945 */
+
+.header-nicholls-wrapper- {
+	background: #2d2d2d;
+	background-image: url( 'library/images/backgrounds/bg-pattern-n-rectangles-grey-dark.png' );	
+}
+
+.header-nicholls- {
+	background-image: none;
+	height: auto;
+}
+
+.notice {
+	background-color: yellow;
+}
+
+.flex-active-slide img {
+	float: left;
+}
+
+.flex-caption {
+	float: left;
+	color: #fff;
+    margin-top: -6.8em;
+}
+
+.flex-caption a, .flex-caption a:link, .flex-caption a:visited, .flex-caption a:active {
+	color: #fff;
+}
+
+.flex-caption-title {
+	text-shadow: 1px 1px 1px black;
+    margin: .2em 0;
+    padding: .4em;
+    color: #fff;
+    background: transparent url( 'library/images/backgrounds/bg-transparent-black-60.png' );      	
+}
+
+.flex-caption-title a {
+	text-decoration: none;
+}
+
+.flex-caption-content {
+    margin: .2em .4em;
+    padding: .4em;
+    background: transparent url( 'library/images/backgrounds/bg-transparent-black-60.png' );      
+}
+
+/* START - Nicholls Home Menu */
+
+.nicholls-home-list-container- {	
+	text-align: left;
+	clear: both;
+	position: relative;
+	z-index: 1001;
+}
+
+.nicholls-home-list-container- .nicholls-home-list- {
+	list-style-type: none;
+	list-style-position: inside;	
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-item {
+	list-style-type: none;
+	list-style-position: inside;
+	padding: 0;
+	float: left;
+	font-weight: 600;	
+	color: $nicholls-color-red;
+	display: block;
+	width: 13%;
+	text-align: center;
+	margin-left: .5em;
+}
+
+.nicholls-home-apply-link- {
+	@include nicholls_home_icon('red-apply');
+}
+
+.nicholls-home-calendar-link- {
+	@include nicholls_home_icon('red-calendar');
+}
+
+.nicholls-home-explore-link- {
+	@include nicholls_home_icon('red-explore');
+}
+
+.nicholls-home-finaid-link- {
+	@include nicholls_home_icon('red-financial-aid');
+}
+
+.nicholls-home-majors-link- {
+	@include nicholls_home_icon('red-majors');
+}
+
+.nicholls-home-tour-link- {
+	@include nicholls_home_icon('red-tour');
+}
+
+.nicholls-home-social-link- {
+	@include nicholls_home_icon('red-social');
+}
+
+/* Layout - Large Screen breakpoint is 1166 */
+@include at-breakpoint( 74em 32 ) {
+
+	
+}
+
+/* Layout - Tablet Screen breakpoint is  */
+@include at-breakpoint( 42em 18 62em ) {
+
+}
+
+/* Layout - Phone Screen Landscape breakpoint is  */
+@include at-breakpoint( 28em 12 42em ) {
+		
+}
+
+/* Layout - Phone Screen Portrait breakpoint is  */
+@include at-breakpoint( 0em 8 28em ) {
+
+}
+
+/* Layout - High Resolution Screens */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+/*  @import 'media/high-rez'; */
+}
+

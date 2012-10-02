@@ -104,7 +104,7 @@ echo $page_message;
 			<li id="nicholls-home-list-majors" class="nicholls-home-list-item nicholls-home-list-majors-"><a class="nicholls-home-list-item-link nicholls-home-majors-link-" href="">Majors &amp; Academics</a></li>
 			<li id="nicholls-home-list-tour" class="nicholls-home-list-item nicholls-home-list-tour-"><a class="nicholls-home-list-item-link nicholls-home-tour-link-" href="">Schedule A Tour</a></li>
 			<li id="nicholls-home-list-finaid" class="nicholls-home-list-item nicholls-home-list-finaid-"><a class="nicholls-home-list-item-link nicholls-home-finaid-link-" href="">Financial Aid</a></li>
-			<li id="nicholls-home-list-explore" class="nicholls-home-list-item nicholls-home-list-explore-"><a class="nicholls-home-list-item-link nicholls-home-expore-link-" href="">Expore Nicholls</a></li>
+			<li id="nicholls-home-list-explore" class="nicholls-home-list-item nicholls-home-list-explore-"><a class="nicholls-home-list-item-link nicholls-home-explore-link-" href="">Expore Nicholls</a></li>
 			<li id="nicholls-home-list-social" class="nicholls-home-list-item nicholls-home-list-social-"><a class="nicholls-home-list-item-link nicholls-home-social-link-" href="">Social Media</a></li>
 		</ul>
 	</div>
