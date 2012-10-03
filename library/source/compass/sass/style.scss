@@ -162,7 +162,6 @@ $container-style: static;
 /* Layout - Large Screen breakpoint is 1166 */
 @include at-breakpoint( 74em 32 ) {
 
-	
 }
 
 /* Layout - Tablet Screen breakpoint is  */
@@ -184,4 +183,3 @@ $container-style: static;
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
 /*  @import 'media/high-rez'; */
 }
-
