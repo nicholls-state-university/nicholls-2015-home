@@ -84,6 +84,9 @@ $container-style: static;
 }
 
 .flex-caption-title {
+	font-family: 'Crimson Text', Georgia, "TImes New Roman", times, serif;
+	font-weight: 400;
+    font-size: 225%;
 	text-shadow: 1px 1px 1px black;
     margin: .2em 0;
     padding: .4em;
@@ -157,6 +160,20 @@ $container-style: static;
 
 .nicholls-home-social-link- {
 	@include nicholls_home_icon('red-social');
+}
+
+.flexslider-container-nav- {
+  margin: .5em auto;
+  width: auto;
+}
+
+.flexslider-container-nav- li {
+	margin-left: .4em;
+	width: 60px;
+}
+
+.flexslider-container-nav- li img {
+	border: 1px solid #ccc;
 }
 
 /* Layout - Large Screen breakpoint is 1166 */
