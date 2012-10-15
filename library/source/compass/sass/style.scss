@@ -187,17 +187,23 @@ $container-style: static;
 
 /* Layout - Tablet Screen breakpoint is  */
 @include at-breakpoint( 42em 18 62em ) {
-
+	.flexslider-all- {
+		margin-top: 8em;
+	}
 }
 
 /* Layout - Phone Screen Landscape breakpoint is  */
 @include at-breakpoint( 28em 12 42em ) {
-		
+	.flexslider-all- {
+		margin-top: 8em;
+	}	
 }
 
 /* Layout - Phone Screen Portrait breakpoint is  */
 @include at-breakpoint( 0em 8 28em ) {
-
+	.flexslider-all- {
+		margin-top: 8em;
+	}
 }
 
 /* Layout - High Resolution Screens */
