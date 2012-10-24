@@ -81,6 +81,7 @@ $container-style: static;
 	float: left;
 	color: #fff;
     margin-top: -8.4em;
+    font-size: 94%;
 }
 
 .flex-caption a, .flex-caption a:link, .flex-caption a:visited, .flex-caption a:active {
@@ -138,6 +139,10 @@ $container-style: static;
 	margin-left: .5em;
 }
 
+.nicholls-home-list-item a, .nicholls-home-list-item a:link, .nicholls-home-list-item a:visited, .nicholls-home-list-item a:active {
+	text-decoration: none;
+} 
+
 .nicholls-home-apply-link- {
 	@include nicholls_home_icon('red-apply');
 }
@@ -188,22 +193,65 @@ $container-style: static;
 /* Layout - Tablet Screen breakpoint is  */
 @include at-breakpoint( 42em 18 62em ) {
 	.flexslider-all- {
-		margin-top: 8em;
+		margin-top: 12.8em;
 	}
+	
+	.flex-caption {
+		float: left;
+		color: #fff;
+		margin-top: -8.4em;
+		font-size: 80%;
+	}	
 }
 
 /* Layout - Phone Screen Landscape breakpoint is  */
 @include at-breakpoint( 28em 12 42em ) {
 	.flexslider-all- {
-		margin-top: 8em;
-	}	
+		margin-top: 17.4em;
+	}
+	
+	.flex-caption {
+		float: left;
+		color: #fff;
+		margin-top: -8.4em;
+		font-size: 76%;
+	}
+		
+	.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-item {
+		width: 23%;
+	}
+	
+	.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-finaid- {
+		clear: left;
+		margin-left: 4em;
+	}
 }
 
 /* Layout - Phone Screen Portrait breakpoint is  */
 @include at-breakpoint( 0em 8 28em ) {
 	.flexslider-all- {
-		margin-top: 8em;
+		margin-top: 20.4em;
 	}
+	
+	.flex-caption {
+		float: left;
+		color: #fff;
+		margin-top: -4.4em;
+		font-size: 70%;
+	}
+		
+	.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-item {
+		width: 25%;
+	}
+	
+	.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-apply- {
+		margin-left: 4em;
+	}
+	
+	.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-calendar- {
+		clear: left;
+	}
+	
 }
 
 /* Layout - High Resolution Screens */
