@@ -66,6 +66,8 @@ function emergency_rss_output( $rss, $args = array() ) {
 	} elseif ( !is_object($rss) ) {
 		return;
 	}
+	
+	$alert_class = 'nicholls-emergency-notice ' . $alert_class;
 
 	if ( is_wp_error($rss) ) {
 		if ( is_admin() || current_user_can('manage_options') )
@@ -87,7 +89,7 @@ function emergency_rss_output( $rss, $args = array() ) {
 
 	if ( !$rss->get_item_quantity() ) return;
 	
-	echo '<div class="' . $alert_class . '">';
+	echo '<div class="nicholls-emergency-notice-wrapper"><div class="' . $alert_class . '">';
 	
 	echo '<h2>' . $alert_title . '</h2>';
 
@@ -140,32 +142,35 @@ function emergency_rss_output( $rss, $args = array() ) {
 	}
 	echo '</ul>';
 	if ( isset( $alert_notice ) ) echo '<p>' . $alert_notice . '</p>';
-	echo '</div>';
+	echo '</div></div>';
 	
 }
 
 
 function nicholls_emergency_notice_get() {
 
+	// $emergency_url_root = 'http://emergency.nicholls.edu';
+	$emergency_url_root = 'http://work.funroe.net/wordpress/current-ms/nicholls-emergency';
+	
 	$emergency_site_notice = 'If the Nicholls Web site becomes unavailable, please visit <a href="http://emergency.nicholls.edu/">emergency.nicholls.edu</a> for important announcements.';
 	
 	emergency_rss_output( array(
-		'url' => 'http://emergency.nicholls.edu/category/notice/feed/',
-		'alert_class' => 'notice web_notice',
+		'url' => $emergency_url_root . '/category/notice/feed/',
+		'alert_class' => 'web_notice',
 		'alert_title' => 'Nicholls State University Notice:',
 		'show_date' => false,
 	) );
 	
 	emergency_rss_output( array(
-		'url' => 'http://emergency.nicholls.edu/category/alert/feed/',
-		'alert_class' => 'notice alert',
+		'url' => $emergency_url_root . '/category/alert/feed/',
+		'alert_class' => 'alert',
 		'alert_title' => 'Campus Alert:',
 		'show_date' => true
 	) );
 	
 	emergency_rss_output( array(
-		'url' => 'http://emergency.nicholls.edu/category/emergency/feed/',
-		'alert_class' => 'notice emergency',
+		'url' => $emergency_url_root . '/category/emergency/feed/',
+		'alert_class' => 'emergency',
 		'alert_title' => 'Campus Emergency Preparedness Notice:',
 		'show_date' => true,
 		'alert_notice' => $emergency_site_notice

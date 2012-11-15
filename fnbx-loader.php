@@ -75,6 +75,13 @@ function fnbx_defaut_init_actions() {
 	// Nicholls Header - custom header.php - Layout
 	add_action( 'nicholls_header_start', 'nicholls_layout_wrapper_element_open' );	
 	add_action( 'nicholls_header_end', 'nicholls_layout_wrapper_element_close' );
+
+	add_action( 'nicholls_header_start', 'nicholls_emergency_notices' );
+	// Emergency Preparedness Notices
+	if ( is_front_page() ) {
+		add_action( 'nicholls_header_start', 'nicholls_emergency_notice_get' );
+	}	
+	
 	add_action( 'nicholls_header_start', 'fnbx_layout_element_open' );	
 	add_action( 'nicholls_header_end', 'fnbx_layout_element_close' );
 	
@@ -89,8 +96,7 @@ function fnbx_defaut_init_actions() {
 	
 	if ( is_front_page() ) {
 		add_action( 'nicholls_theme_home_column_a', 'nicholls_theme_widgets_home_special' );
-		// Emergency Preparedness Notices
-		add_action( 'nicholls_header_start', 'nicholls_emergency_notice_get' );
+		
 		// Image Slider - via plugin
 		add_action( 'nicholls_header_start', 'j_flex_slider' );
 		

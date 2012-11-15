@@ -99,13 +99,13 @@ echo $page_message;
 	
 	<div id="nicholls-home-list-container" class="nicholls-home-list-container-">
 		<ul id="nicholls-home-list" class="nicholls-home-list-">
-			<li id="nicholls-home-list-apply" class="nicholls-home-list-item nicholls-home-list-apply-"><a class="nicholls-home-list-item-link nicholls-home-apply-link-" href="">Apply Now</a></li>
-			<li id="nicholls-home-list-calendar" class="nicholls-home-list-item nicholls-home-list-calendar-"><a class="nicholls-home-list-item-link nicholls-home-calendar-link-" href="">Calendar</a></li>
-			<li id="nicholls-home-list-majors" class="nicholls-home-list-item nicholls-home-list-majors-"><a class="nicholls-home-list-item-link nicholls-home-majors-link-" href="">Majors &amp; Academics</a></li>
-			<li id="nicholls-home-list-tour" class="nicholls-home-list-item nicholls-home-list-tour-"><a class="nicholls-home-list-item-link nicholls-home-tour-link-" href="">Schedule A Tour</a></li>
-			<li id="nicholls-home-list-finaid" class="nicholls-home-list-item nicholls-home-list-finaid-"><a class="nicholls-home-list-item-link nicholls-home-finaid-link-" href="">Financial Aid</a></li>
-			<li id="nicholls-home-list-explore" class="nicholls-home-list-item nicholls-home-list-explore-"><a class="nicholls-home-list-item-link nicholls-home-explore-link-" href="">Explore Nicholls</a></li>
-			<li id="nicholls-home-list-social" class="nicholls-home-list-item nicholls-home-list-social-"><a class="nicholls-home-list-item-link nicholls-home-social-link-" href="">Social Media</a></li>
+			<li id="nicholls-home-list-apply" class="nicholls-home-list-item nicholls-home-list-apply-"><a class="nicholls-home-list-item-link nicholls-home-apply-link-" href="http://www.nicholls.edu/apply/">Apply Now</a></li>
+			<li id="nicholls-home-list-calendar" class="nicholls-home-list-item nicholls-home-list-calendar-"><a class="nicholls-home-list-item-link nicholls-home-calendar-link-" href="http://www.nicholls.edu/calendar/">Calendar</a></li>
+			<li id="nicholls-home-list-majors" class="nicholls-home-list-item nicholls-home-list-majors-"><a class="nicholls-home-list-item-link nicholls-home-majors-link-" href="http://www.nicholls.edu/programs/">Majors &amp; Academics</a></li>
+			<li id="nicholls-home-list-tour" class="nicholls-home-list-item nicholls-home-list-tour-"><a class="nicholls-home-list-item-link nicholls-home-tour-link-" href="http://www.nicholls.edu/tours/">Schedule A Tour</a></li>
+			<li id="nicholls-home-list-finaid" class="nicholls-home-list-item nicholls-home-list-finaid-"><a class="nicholls-home-list-item-link nicholls-home-finaid-link-" href="http://www.nicholls.edu/financial-aid/">Financial Aid</a></li>
+			<li id="nicholls-home-list-explore" class="nicholls-home-list-item nicholls-home-list-explore-"><a class="nicholls-home-list-item-link nicholls-home-explore-link-" href="http://www.nicholls.edu/welcome/">Explore Nicholls</a></li>
+			<li id="nicholls-home-list-social" class="nicholls-home-list-item nicholls-home-list-social-"><a class="nicholls-home-list-item-link nicholls-home-social-link-" href="http://www.nicholls.edu/about/resources/social-media/">Social Media</a></li>
 		</ul>
 	</div>
 
