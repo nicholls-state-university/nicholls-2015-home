@@ -23,6 +23,20 @@ function nicholls_theme_home_init_action() {
 	remove_action( 'fnbx_header', 'fnbx_default_title' );
 	remove_action( 'fnbx_header', 'fnbx_default_description' );
 	
+	// Adjust layout 
+	remove_action( 'fnbx_header_start', 'fnbx_layout_element_open' );
+	remove_action( 'fnbx_header_end', 'fnbx_layout_element_close' );
+	remove_action( 'fnbx_header', 'fnbx_default_title' );
+	remove_action( 'fnbx_header', 'fnbx_default_description' );
+	
+	add_action( 'nicholls_theme_home_column_a', 'nicholls_theme_widgets_home_special' );
+	
+	// Image Slider - via plugin
+	add_action( 'nicholls_header_start', 'j_flex_slider' );
+	
+	// Filter to clear out sidebar widgets to make full page
+	add_action( 'fnbx_child_init', 'nicholls_template_core_full_page');	
+	
 	// Google Webmaster Tools verification
 	add_action( 'fnbx_wp_head_before', 'nicholls_theme_home_google_verify' );
 	
@@ -33,6 +47,12 @@ function nicholls_theme_home_init_action() {
 	}
 }
 add_action( 'fnbx_child_init', 'nicholls_theme_home_init_action' );
+
+// Remove Header CSS
+function nicholls_theme_home_header_css_filter( $css_text = '' ) {
+	return 0;
+}
+add_filter( 'fnbx_custom_header_css_background',  'nicholls_theme_home_header_css_filter' );
 
 /** 
 * Nicholls Theme Home init action

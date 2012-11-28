@@ -48,8 +48,8 @@ function fnbx_defaut_init_actions() {
 	// Layout - Main
 	add_action( 'fnbx_wrapper_start', 'fnbx_layout_element_open' );
 	add_action( 'fnbx_wrapper_end', 'fnbx_layout_element_close' );	
-	// add_action( 'fnbx_header_start', 'fnbx_layout_element_open' );
-	// add_action( 'fnbx_header_end', 'fnbx_layout_element_close' );
+	add_action( 'fnbx_header_start', 'fnbx_layout_element_open' );
+	add_action( 'fnbx_header_end', 'fnbx_layout_element_close' );
 	add_action( 'fnbx_container_start', 'fnbx_layout_element_open' );
 	add_action( 'fnbx_container_end', 'fnbx_layout_element_close' );	
 	add_action( 'fnbx_content_start', 'fnbx_layout_element_open' );
@@ -64,23 +64,23 @@ function fnbx_defaut_init_actions() {
 	add_action( 'fnbx_template_loop_content_end', 'fnbx_layout_element_close' );
 
 	// Website Title
-	// add_action( 'fnbx_header', 'fnbx_default_title' );
+	add_action( 'fnbx_header', 'fnbx_default_title' );
 
 	// Website Description
-	// add_action( 'fnbx_header', 'fnbx_default_description' );
+	add_action( 'fnbx_header', 'fnbx_default_description' );
 	
 	// Add Accessiblity and Menu before nicholls-header if not home
 	add_action( 'nicholls_header_start', 'fnbx_access_menu' );	
-	
-	// Nicholls Header - custom header.php - Layout
-	add_action( 'nicholls_header_start', 'nicholls_layout_wrapper_element_open' );	
-	add_action( 'nicholls_header_end', 'nicholls_layout_wrapper_element_close' );
 
 	add_action( 'nicholls_header_start', 'nicholls_emergency_notices' );
 	// Emergency Preparedness Notices
 	if ( is_front_page() ) {
 		add_action( 'nicholls_header_start', 'nicholls_emergency_notice_get' );
-	}	
+	}
+	
+	// Nicholls Header - custom header.php - Layout
+	add_action( 'nicholls_header_start', 'nicholls_layout_wrapper_element_open' );	
+	add_action( 'nicholls_header_end', 'nicholls_layout_wrapper_element_close' );	
 	
 	add_action( 'nicholls_header_start', 'fnbx_layout_element_open' );	
 	add_action( 'nicholls_header_end', 'fnbx_layout_element_close' );
@@ -93,16 +93,6 @@ function fnbx_defaut_init_actions() {
 	
 	// Entry title
 	add_action( 'fnbx_template_loop_entry_title', 'fnbx_entry_title' );
-	
-	if ( is_front_page() ) {
-		add_action( 'nicholls_theme_home_column_a', 'nicholls_theme_widgets_home_special' );
-		
-		// Image Slider - via plugin
-		add_action( 'nicholls_header_start', 'j_flex_slider' );
-		
-		// Filter to clear out sidebar widgets to make full page
-		add_action( 'fnbx_child_init', 'nicholls_template_core_full_page');
-	}
 		
 	// For all archives we put a page title, for author and categories we put desicription meta if available
 	if ( is_archive() ) {

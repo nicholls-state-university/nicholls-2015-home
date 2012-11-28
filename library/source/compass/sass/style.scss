@@ -55,7 +55,7 @@ $container-style: static;
 
 /* Layout - Default breakpoint is 945 */
 
-.header-nicholls-wrapper- {
+body.home-page .header-nicholls-wrapper- {
 	background: #2d2d2d;
 	background-image: url( 'library/images/backgrounds/bg-pattern-n-rectangles-grey-dark.png' );	
 }
@@ -188,14 +188,15 @@ $container-style: static;
 /* Emergency Preparedness Notices */
 
 .nicholls-emergency-notice-wrapper {
-	@include container;
-	background-color: yellow;
 	border-top: 1px solid $nicholls-color-grey-light-3;
 	border-bottom: 1px solid $nicholls-color-grey-light-3;	
 	padding: .2em .2em;
+	background: #000;
 }
 
 .nicholls-emergency-notice {
+	@include container;
+	background-color: yellow;
 	border: 2px dotted #F90;
 	padding: .2em;
 }
@@ -232,14 +233,14 @@ $container-style: static;
 
 /* Layout - Large Screen breakpoint is 1166 */
 @include at-breakpoint( 74em 32 ) {
-	.nicholls-emergency-notice-wrapper {
+	.nicholls-emergency-notice {
 		@include container;
 	}
 }
 
 /* Layout - Tablet Screen breakpoint is  */
 @include at-breakpoint( 42em 18 62em ) {
-	.nicholls-emergency-notice-wrapper {
+	.nicholls-emergency-notice {
 		@include container;
 	}
 	
@@ -257,7 +258,7 @@ $container-style: static;
 
 /* Layout - Phone Screen Landscape breakpoint is  */
 @include at-breakpoint( 28em 12 42em ) {
-	.nicholls-emergency-notice-wrapper {
+	.nicholls-emergency-notice {
 		@include container;
 	}
 	
@@ -284,7 +285,7 @@ $container-style: static;
 
 /* Layout - Phone Screen Portrait breakpoint is  */
 @include at-breakpoint( 0em 8 28em ) {
-	.nicholls-emergency-notice-wrapper {
+	.nicholls-emergency-notice {
 		@include container;
 	}
 	
