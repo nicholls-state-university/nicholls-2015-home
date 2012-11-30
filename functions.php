@@ -150,8 +150,9 @@ function emergency_rss_output( $rss, $args = array() ) {
 
 function nicholls_emergency_notice_get() {
 
-	// $emergency_url_root = 'http://emergency.nicholls.edu';
-	$emergency_url_root = 'http://work.funroe.net/wordpress/current-ms/nicholls-emergency';
+	$emergency_url_root = 'http://emergency.nicholls.edu';
+	/* for Testing */
+	// $emergency_url_root = 'http://work.funroe.net/wordpress/current-ms/nicholls-emergency'; 
 	
 	$emergency_site_notice = 'If the Nicholls Web site becomes unavailable, please visit <a href="http://emergency.nicholls.edu/">emergency.nicholls.edu</a> for important announcements.';
 	
