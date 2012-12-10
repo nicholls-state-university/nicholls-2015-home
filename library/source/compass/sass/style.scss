@@ -65,6 +65,11 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 	height: auto;
 }
 
+/* ISSUE: causes spacing above .header-nicholls */
+.header-nicholls- .section-slider {
+	float: left;
+}
+
 .flexslider-all- {
 	background-color: #000;
 }
