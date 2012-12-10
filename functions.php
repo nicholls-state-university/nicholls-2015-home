@@ -50,6 +50,12 @@ function nicholls_home_j_flex_slider_img_thumb_config( $flex_image_config ) {
 }
 add_filter( 'j_flex_image_thumb_config', 'nicholls_home_j_flex_slider_img_thumb_config' );
 
+function nicholls_home_j_flex_show_num( $show_num = 5 ) {
+	return 10;
+}
+add_filter( 'j_flex_show_num', 'nicholls_home_j_flex_show_num' );
+
+
 /**
  * Taken directly from wp_rss_display Display the RSS entries in a list.
  *
