@@ -306,11 +306,16 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 	}
 		
 	.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-item {
-		width: 25%;
+		width: 30%;
+	}
+	
+	.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-calendar-,
+	.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-finaid- {
+		margin-left: 0;
 	}
 	
 	.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-apply- {
-		margin-left: 4em;
+		margin-left: 7em;
 	}
 	
 	.nicholls-home-list-container- .nicholls-home-list- .nicholls-home-list-calendar- {
