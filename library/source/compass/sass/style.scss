@@ -73,6 +73,9 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 .flexslider-all- {
 	@include container;
 	background-color: #000;
+	/* ISSUE: IE9 Won't just go 100% */
+	min-width: 942px !important;
+	min-height: 496px !important;	
 }
 
 .flex-active-slide img {
@@ -246,6 +249,14 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 	.nicholls-emergency-notice {
 		@include container;
 	}
+	
+	.flexslider-all- {
+		@include container;
+		/* ISSUE: IE9 Won't just go 100% */
+		min-width: 1166px !important;
+		min-height: 614px !important;
+	}
+	
 }
 
 /* Layout - Tablet Screen breakpoint is  */
@@ -257,6 +268,9 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 	.flexslider-all- {
 		@include container;	
 		margin-top: 12.8em;
+		/* ISSUE: IE9 Won't just go 100% */
+		min-width: 650px !important;
+		min-height: 342px !important;		
 	}
 	
 	.flex-caption {
@@ -276,6 +290,9 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 	.flexslider-all- {
 		@include container;	
 		margin-top: 17.4em;
+		/* ISSUE: IE9 Won't just go 100% */
+		min-width: 429px !important;
+		min-height: 227px !important;		
 	}
 	
 	.flex-caption {
@@ -302,7 +319,10 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 	}
 	
 	.flexslider-all- {
-		@include container;	
+		@include container;
+		/* ISSUE: IE9 Won't just go 100% */
+		min-width: 280px !important;
+		min-height: 152px !important;
 		margin-top: 20.4em;
 	}
 	
