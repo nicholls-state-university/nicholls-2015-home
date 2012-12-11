@@ -71,6 +71,7 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 }
 
 .flexslider-all- {
+	@include container;
 	background-color: #000;
 }
 
@@ -254,6 +255,7 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 	}
 	
 	.flexslider-all- {
+		@include container;	
 		margin-top: 12.8em;
 	}
 	
@@ -272,6 +274,7 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 	}
 	
 	.flexslider-all- {
+		@include container;	
 		margin-top: 17.4em;
 	}
 	
@@ -299,6 +302,7 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 	}
 	
 	.flexslider-all- {
+		@include container;	
 		margin-top: 20.4em;
 	}
 	
