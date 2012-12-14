@@ -80,8 +80,7 @@ function fnbx_defaut_init_actions() {
 	
 	// Nicholls Header - custom header.php - Layout
 	add_action( 'nicholls_header_start', 'nicholls_layout_wrapper_element_open' );	
-	add_action( 'nicholls_header_end', 'nicholls_layout_wrapper_element_close' );	
-	
+	add_action( 'nicholls_header_end', 'nicholls_layout_wrapper_element_close' );
 	add_action( 'nicholls_header_start', 'fnbx_layout_element_open' );	
 	add_action( 'nicholls_header_end', 'fnbx_layout_element_close' );
 	
