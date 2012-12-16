@@ -1,10 +1,23 @@
 <?php
 /*
-Template Name: Full Page, No Sidebars
+Template Name: Top Page, Moved title - No Sidebars
 */
 
 // Filter to clear out sidebar widgets to make full page
 add_action( 'fnbx_child_init', 'nicholls_template_core_full_page');
+
+// Move the titles around
+function nicholls_move_title() {
+	// Website Title
+	remove_action( 'fnbx_header', 'fnbx_default_title' );
+	// Website Description
+	remove_action( 'fnbx_header', 'fnbx_default_description' );
+	// Entry title
+	remove_action( 'fnbx_template_loop_entry_title', 'fnbx_entry_title' );
+	// Move the entry-title
+	add_action( 'fnbx_header', 'fnbx_entry_title' );
+}
+add_action( 'fnbx_child_init', 'nicholls_move_title');
 
 ?>
 

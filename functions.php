@@ -4,7 +4,7 @@
 require_once( WP_CONTENT_DIR . '/themes/nicholls-2012-core/functions.php' );
 
 /*
-* Funbox Theme Support Filter
+* FNBX Theme Support Filter
 *
 * Since this may be delpolyed on WordPress sites lacking some theme support features.
 *
