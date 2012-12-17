@@ -61,7 +61,7 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 }
 
 body.home-page .container-, body.home .container- {
-	@include container;
+	width: 100%;
 }
 
 .header-nicholls- {
