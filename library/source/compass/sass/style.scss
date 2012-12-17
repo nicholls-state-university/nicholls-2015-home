@@ -60,6 +60,10 @@ body.home-page .header-nicholls-wrapper-, body.home .header-nicholls-wrapper- {
 	background-image: url( 'library/images/backgrounds/bg-pattern-n-rectangles-grey-dark.png' );	
 }
 
+body.home-page .container-, body.home .container- {
+	@include container;
+}
+
 .header-nicholls- {
 	background-image: none;
 	height: auto;
