@@ -45,7 +45,7 @@ function nicholls_theme_home_init_action() {
 	
 	
 		// Google Analytics Tracking for Nicholls - See Nicholls Tracking Plugin
-		if ( function_exists( 'nicholls_google_analytics' ) add_action( 'fnbx_wp_head_after', 'nicholls_google_analytics' );
+		if ( function_exists( 'nicholls_google_analytics' ) ) add_action( 'fnbx_wp_head_after', 'nicholls_google_analytics' );
 		
 		remove_action( 'fnbx_container_end', 'fnbx_default_widget_sidebar' );
 		// add_action( 'fnbx_wp_head_after', 'nicholls_google_analytics' );
