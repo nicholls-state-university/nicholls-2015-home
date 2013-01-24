@@ -7,7 +7,7 @@ add_action( 'wp', 'fnbx_stylesheet_init' );
 add_action( 'wp', 'fnbx_stylesheet_core_bp_init' );
 
 /*
-* FNBX Shut Up Theme Default Actions
+* FNBX Theme Default Actions
 *
 * Default actions for the FNBX Theme Framework are added by the fnbx_init
 * located in the header.php file
@@ -17,6 +17,8 @@ add_action( 'wp', 'fnbx_stylesheet_core_bp_init' );
 * @since 1.0
 */
 function fnbx_defaut_init_actions() {
+
+	$n_options = get_option('nicholls_core_theme_options');
 	
 	// ISSUE: BuddyPress WPMU adminbar CSS needs to be loaded properly
 	if ( is_user_logged_in() ) wp_enqueue_style( 'bp-admin-bar' );
@@ -92,7 +94,10 @@ function fnbx_defaut_init_actions() {
 	
 	// Entry title
 	add_action( 'fnbx_template_loop_entry_title', 'fnbx_entry_title' );
-		
+	
+	// Entry date
+	if ( $n_options['site_remove_dates'] == false ) add_action( 'fnbx_template_loop_entry_title', 'fnbx_entry_date' );
+
 	// For all archives we put a page title, for author and categories we put desicription meta if available
 	if ( is_archive() ) {
 		// Loop template page title and description for some
@@ -105,13 +110,16 @@ function fnbx_defaut_init_actions() {
 	// Home example adding a post thumbnail
 	if ( is_home() ) add_action( 'fnbx_template_loop_content_start', 'fnbx_the_post_thumbnail' );
 
-	// Content meta do we want brief or verbose, we could also filter or change with language files.
-	if ( is_home() || ( is_archive() || is_search() ) ) 
-		add_action( 'fnbx_template_loop_content_end', 'fnbx_post_meta_brief' );
-	// This should cover is_single, is_attachement, is_image
-	elseif ( !is_page() )
-		add_action( 'fnbx_template_loop_content_end', 'fnbx_post_meta_verbose' );		
-	
+	// Nicholls theme options can disable all meta display
+	if ( $n_options['site_remove_post_meta'] == false ) {
+		// Content meta do we want brief or verbose, we could also filter or change with language files.
+		if ( is_home() || ( is_archive() || is_search() ) ) 
+			add_action( 'fnbx_template_loop_content_end', 'fnbx_post_meta_brief' );
+		// This should cover is_single, is_attachement, is_image
+		elseif ( !is_page() )
+			add_action( 'fnbx_template_loop_content_end', 'fnbx_post_meta_verbose' );
+	}
+		
 	// Put an edit link for pages since we don't show meta
 	if ( is_page() ) add_action( 'fnbx_template_loop_content_end', 'fnbx_post_meta_edit' );		
 		
