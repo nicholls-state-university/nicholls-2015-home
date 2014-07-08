@@ -79,30 +79,6 @@ function nicholls_home_widget_sidebar() {
 	fnbx_generate_widgets( 'Home Special' );
 }
 
-/** 
-* Reset RSS Cache for emergency.nicholls.edu
-*
-* This needs to be automated somehow on emergeny.nicholls.edu to reset the cache on nicholls.edu. 
-* URI to reset cache: http://www.nicholls.edu/?rss_reset=yes
-* See $page_message for notification message.
-*
-*/
-function nicholls_reset_feed_cache( $timer ) {
-	return 1;
-}
-
-// Do the cache emergency reset.
-$reset_nonce = $_REQUEST['_wpnonce'];
-if ( wp_verify_nonce( $reset_nonce, 'emergency_reset') ) {
-	if ( $_GET['emergency_reset'] == 'yes' ) {
-		global $file_prefix;
-		add_filter( 'wp_feed_cache_transient_lifetime', 'nicholls_reset_feed_cache' );
-		if ( function_exists( 'wp_cache_clean_cache' ) )
-			wp_cache_clean_cache($file_prefix);
-		$page_message = '<p style="margin: .5em; padding: 2em; background: yellow; font-size: 140%; font-weight: bold;">Website Home Page Reset!</p>';
-	}
-}
-
 ?>
 
 <?php get_header() ?>

@@ -77,11 +77,8 @@ function fnbx_defaut_init_actions() {
 	// Add Accessiblity and Menu before nicholls-header if not home
 	add_action( 'nicholls_header_start', 'fnbx_access_menu' );	
 
-	add_action( 'nicholls_header_start', 'nicholls_emergency_notices' );
 	// Emergency Preparedness Notices
-	if ( is_front_page() ) {
-		add_action( 'nicholls_header_start', 'nicholls_emergency_notice_get' );
-	}
+	add_action( 'nicholls_header_start', 'nicholls_emergency_notices' );
 	
 	// Nicholls Header - custom header.php - Layout
 	add_action( 'nicholls_header_start', 'nicholls_layout_wrapper_element_open' );	

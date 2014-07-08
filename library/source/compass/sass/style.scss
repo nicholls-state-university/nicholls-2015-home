@@ -8,7 +8,7 @@ AUTHOR URI: http://www.nicholls.edu
 TEMPLATE: fnbx
 */
 
-/* 
+/*! 
 Copyright (c) Jess Planck (http://funroe.net)
 
 The FNBX Theme is released under the GNU General Public License.
@@ -29,9 +29,9 @@ with WordPress.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 /* Imports --------------------------------------------------------------*/
-
 @import 'nicholls-sprites';
-@import "base";
+@import 'base';
+@import 'breakpoint';
 /* @import 'defaults'; */
 
 /* Layouts */
@@ -42,16 +42,29 @@ Column Notes
 .25 width = .6565
 */
 
-$total-columns: 26; 
-$column-width: 1.423em;
-$gutter-width: .88em;
-$grid-padding: 0;
-$show-grid-backgrounds: $show_grids;
+/* Susy - Configuration */
 
+$susy: (
+  // the basics
+  columns: 26,
+  gutters: .88,
+  column-width: 1.423em,
+  // advanced
+  math: static
+);
+
+/* Susy - Configuration - Debug */
 /*
-Make Static or Magic
+$susy: (
+  //debug
+  debug: (
+    image: show,
+    color: blue,
+    output: overlay,
+    toggle: top right,
+  ),
+);
 */
-$container-style: static;
 
 /* Layout - Default breakpoint is 945 */
 
@@ -75,7 +88,7 @@ body.home-page .container-, body.home .container- {
 }
 
 .flexslider-all- {
-	@include container;
+	@include container(26);
 	background-color: #000;
 	/* ISSUE: IE9 Won't just go 100% */
 	min-width: 942px !important;
@@ -211,30 +224,14 @@ body.home-page .container-, body.home .container- {
 }
 
 .nicholls-emergency-notice {
-	@include container;
+	@include container(26);
 	background-color: yellow;
 }
 
-.nicholls-emergency-notice div {
-	padding: .6em;
-	border: 2px dotted #F90;	
-}
-
-.nicholls-emergency-notice p {
-	margin: .2em 0;
-}
-
-.nicholls-emergency-notice h2 {
-	margin: 0;
-	font-size: 126%;
-	font-weight: 800;
-}
-
 .nicholls-emergency-notice ul {
-	margin: 4px;
+	margin: 0;
 	padding: 0;
-	margin-left: 20px;
-	list-style: none;	
+	list-style-type: none;	
 }
 
 .nicholls-emergency-notice ul li {
@@ -242,6 +239,20 @@ body.home-page .container-, body.home .container- {
 	padding: 0;
 	line-height: 1.1em;
 	font-size: 94%;
+}
+
+.nicholls-emergency-notice p {
+	font-size: 84%;
+	font-weight: 600;
+	margin: 0;
+	padding: .8em 0 .8em .8em;
+}
+
+.nicholls-emergency-notice h2 {
+	margin: 0;
+	padding: .4em 0 .6em .4em;
+	font-size: 126%;
+	font-weight: 800;
 }
 	
 .nicholls-emergency-notice-wrapper .nicholls-emergency-notice a {
@@ -259,10 +270,6 @@ body.home-page .container-, body.home .container- {
 	color: #fff;
 }
 
-.nicholls-emergency-notice-wrapper .message div {
-	border: none;
-}
-
 .nicholls-emergency-notice-wrapper .message h2 {
 	color: #fff;
 }
@@ -278,13 +285,13 @@ body.home-page .container-, body.home .container- {
 }
 
 /* Layout - Large Screen breakpoint is 1166 */
-@include at-breakpoint( 74em 32 ) {
+@include susy-breakpoint( 74em, 32 ) {
 	.nicholls-emergency-notice {
-		@include container;
+		@include container(30);
 	}
 	
 	.flexslider-all- {
-		@include container;
+		@include container(30);
 		/* ISSUE: IE9 Won't just go 100% */
 		min-width: 1166px !important;
 		min-height: 614px !important;
@@ -293,13 +300,13 @@ body.home-page .container-, body.home .container- {
 }
 
 /* Layout - Tablet Screen breakpoint is  */
-@include at-breakpoint( 42em 18 62em ) {
+@include susy-breakpoint( 42em 62em, 18 ) {
 	.nicholls-emergency-notice {
-		@include container;
+		@include container(18);
 	}
 	
 	.flexslider-all- {
-		@include container;	
+		@include container(18);	
 		margin-top: 12.8em;
 		/* ISSUE: IE9 Won't just go 100% */
 		min-width: 650px !important;
@@ -315,13 +322,13 @@ body.home-page .container-, body.home .container- {
 }
 
 /* Layout - Phone Screen Landscape breakpoint is  */
-@include at-breakpoint( 28em 12 42em ) {
+@include susy-breakpoint( 28em 42em, 12 ) {
 	.nicholls-emergency-notice {
-		@include container;
+		@include container(12);
 	}
 	
 	.flexslider-all- {
-		@include container;	
+		@include container(12);	
 		margin-top: 17.4em;
 		/* ISSUE: IE9 Won't just go 100% */
 		min-width: 429px !important;
@@ -346,13 +353,13 @@ body.home-page .container-, body.home .container- {
 }
 
 /* Layout - Phone Screen Portrait breakpoint is  */
-@include at-breakpoint( 0em 8 28em ) {
+@include susy-breakpoint( 0em 28em, 8 ) {
 	.nicholls-emergency-notice {
-		@include container;
+		@include container(8);
 	}
 	
 	.flexslider-all- {
-		@include container;
+		@include container(8);
 		/* ISSUE: IE9 Won't just go 100% */
 		min-width: 280px !important;
 		min-height: 152px !important;
