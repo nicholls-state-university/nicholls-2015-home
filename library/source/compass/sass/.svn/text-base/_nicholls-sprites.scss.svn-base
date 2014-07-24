@@ -1,0 +1,43 @@
+@import "compass/utilities/sprites/base";
+
+// Define Sprite Configurations
+
+// Nicholls Home
+$nicholls-home-sprite-target: "library/images/sprites/nicholls-home-sprite.png";
+$nicholls-home-sprite-map: sprite-map("sprites/icons-home/*.png",
+  $position: 0%,
+  $spacing: 50px,
+  $repeat: no-repeat,
+  $icon-menu-dimensions: true,
+  $icon-menu-spacing: 20px ); /**/
+   
+$nicholls-home-sprite-height: 80px;
+$nicholls-home-sprite-width: 80px;
+
+// Sprite Name
+$nicholls-home-sprite-map-name: sprite-map-name( $nicholls-home-sprite-map );
+
+// mixin
+@mixin icon($name) {
+	.icon-#{$name}{
+		background-image: url($nicholls-menu-sprite-target);
+		background-position: sprite-position($nicholls-menu-sprite-map, $name) !important;
+	}
+}
+
+// mixin
+@mixin nicholls_home_icon( $name ) {
+		background-image: url($nicholls-home-sprite-target);
+		// Adjusted so that icons are horizontally centered.
+		background-position: sprite-position($nicholls-home-sprite-map, $name, 50%) !important;
+		background-repeat: no-repeat;
+		padding-top: $nicholls-home-sprite-height;
+		display: block;
+}
+
+// create icons examples
+// @include icon('red-alumni-friends');
+// @include nicholls_menu_icon('red-athletics');
+
+// move and rename
+$rename: rename-sprite($nicholls-home-sprite-map, $nicholls-home-sprite-target);
