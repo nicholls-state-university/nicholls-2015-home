@@ -3,6 +3,9 @@
 Template Name: Search Engine - Google Hosted
 */
 
+// Make sure this page is not cached.
+define( 'DONOTCACHEPAGE', 1 );
+
 // Filter to clear out sidebar widgets to make full page
 add_action( 'fnbx_child_init', 'nicholls_template_core_full_page');
 
@@ -67,10 +70,20 @@ add_action( 'fnbx_wp_head_after', 'nicholls_google_search_engine_js');
 			<input type="submit" class="submit" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'nicholls_theme_core' ); ?>" />
 		</form>
 		
+	
+<?php
+$test_q_unallowed = array( 'Search...', 'nicholls', 'Nicholls' );
+$test_q = trim( $_REQUEST['q'] );
+?>
 
+<?php if ( in_array( $test_q, $test_q_unallowed ) ): ?>
 		<!-- Place this tag where you want the search results to render -->
-		<gcse:searchresults-only></gcse:searchresults-only> 
-					
+		<gcse:searchresults-only autoSearchOnLoad="false"></gcse:searchresults-only>
+<?php else: ?>
+		<!-- Place this tag where you want the search results to render -->
+		<gcse:searchresults-only></gcse:searchresults-only>
+<?php endif; ?>
+			
 				<?php do_action( "fnbx_template_loop_content_{$fnbx->template_part_name}_end", 'entry-content'  ) ?>
 				<?php do_action( 'fnbx_template_loop_content_end', 'entry-content' ) ?>
 				<!-- END: entry-content -->
